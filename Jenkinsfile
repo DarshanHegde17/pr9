@@ -11,13 +11,13 @@ pipeline {
 
         stage('Run Dev Container') {
             steps {
-                bat 'docker run -d --name dev1-container -p 5000:5000 flaskapp'
+                bat 'docker run -d --name dev2-container -p 6000:6000 flaskapp'
             }
         }
 
         stage('Run Test Container') {
             steps {
-                bat 'docker run -d --name test1-container -p 5001:5000 flaskapp'
+                bat 'docker run -d --name test2-container -p 6001:6000 flaskapp'
             }
         }
     }
